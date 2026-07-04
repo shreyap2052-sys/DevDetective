@@ -64,13 +64,13 @@ While building this project I learned how to:
 ## Live Demo
 
 Netlify Link:
-(Add your deployed Netlify link here)
+https://prodesh-it-devdetective.netlify.app/
 
 ---
 
 ## GitHub Repository
 
-(Add your GitHub repository link here)
+https://github.com/shreyap2052-sys/DevDetective
 
 ---
 
