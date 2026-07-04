@@ -1,0 +1,674 @@
+/* ===========================
+   RESET
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input {
+    font: inherit;
+    border: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ===========================
+   VARIABLES
+=========================== */
+
+:root {
+    --bg-color: #141d2f;
+    --card-color: #1e2a47;
+    --stats-color: #141d2f;
+
+    --primary: #0079ff;
+
+    --text-main: #ffffff;
+    --text-light: #c4d4f2;
+    --text-muted: #8b949e;
+
+    --success: #2ea043;
+    --danger: #f85149;
+
+    --shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+
+    --radius: 15px;
+
+    --transition: all 0.3s ease;
+}
+
+/* ===========================
+   BODY
+=========================== */
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--bg-color);
+    color: var(--text-main);
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 50px 20px;
+}
+
+/* ===========================
+   MAIN CONTAINER
+=========================== */
+
+.container {
+    width: 100%;
+    max-width: 900px;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header {
+    margin-bottom: 35px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--text-main);
+}
+
+/* ===========================
+   SEARCH SECTION
+=========================== */
+
+.search-section {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    background: var(--card-color);
+
+    padding: 12px 15px;
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    margin-bottom: 30px;
+}
+
+/* ===========================
+   SEARCH INPUT
+=========================== */
+
+#searchInput {
+
+    flex: 1;
+
+    background: transparent;
+
+    color: var(--text-main);
+
+    font-size: 1rem;
+
+}
+
+#searchInput::placeholder {
+
+    color: var(--text-muted);
+
+}
+
+#searchInput:focus {
+
+    color: white;
+
+}
+
+/* ===========================
+   SEARCH BUTTON
+=========================== */
+
+#searchBtn {
+
+    background: var(--primary);
+
+    color: white;
+
+    padding: 12px 28px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+#searchBtn:hover {
+
+    transform: translateY(-2px);
+
+    opacity: 0.9;
+
+}
+
+#searchBtn:active {
+
+    transform: scale(0.97);
+
+}
+
+.search-section:focus-within {
+
+    outline: 2px solid var(--primary);
+
+}
+
+/* ===========================
+   PROFILE CARD
+=========================== */
+
+.profile-card {
+
+    display: flex;
+
+    gap: 40px;
+
+    align-items: flex-start;
+
+    background: var(--card-color);
+
+    padding: 40px;
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    margin-bottom: 30px;
+
+}
+
+/* ===========================
+   PROFILE IMAGE
+=========================== */
+
+.profile-image {
+
+    flex-shrink: 0;
+
+}
+
+.profile-image img {
+
+    width: 140px;
+
+    height: 140px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 4px solid var(--primary);
+
+}
+
+/* ===========================
+   PROFILE INFO
+=========================== */
+
+.profile-info {
+
+    flex: 1;
+
+}
+
+#name {
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+
+}
+
+#username {
+
+    color: var(--primary);
+
+    font-weight: 500;
+
+    margin-bottom: 10px;
+
+}
+
+#joinDate {
+
+    color: var(--text-muted);
+
+    margin-bottom: 20px;
+
+}
+
+#bio {
+
+    line-height: 1.8;
+
+    color: var(--text-light);
+
+    margin-bottom: 30px;
+
+}
+
+/* ===========================
+   STATS
+=========================== */
+
+.stats {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background: var(--stats-color);
+
+    padding: 25px;
+
+    border-radius: var(--radius);
+
+    margin-bottom: 30px;
+
+}
+
+.stats div {
+
+    text-align: center;
+
+}
+
+.stats h3 {
+
+    color: var(--text-muted);
+
+    font-size: 0.9rem;
+
+    font-weight: 500;
+
+    margin-bottom: 10px;
+
+}
+
+.stats p {
+
+    font-size: 1.4rem;
+
+    font-weight: 700;
+
+    color: var(--text-main);
+
+}
+
+
+/* ===========================
+   LINKS
+=========================== */
+
+.links {
+
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 18px;
+
+}
+
+.links p,
+.links a {
+
+    color: var(--text-light);
+
+    word-break: break-word;
+
+}
+
+.links a:hover {
+
+    color: var(--primary);
+
+}
+
+
+/* ===========================
+   LOADING
+=========================== */
+
+.loading {
+
+    background: var(--card-color);
+
+    padding: 20px;
+
+    border-radius: var(--radius);
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    font-size: 1.1rem;
+
+    box-shadow: var(--shadow);
+
+}
+
+
+/* ===========================
+   ERROR
+=========================== */
+
+.error {
+
+    background: rgba(248,81,73,.15);
+
+    border: 1px solid var(--danger);
+
+    color: var(--danger);
+
+    padding: 20px;
+
+    border-radius: var(--radius);
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* ===========================
+   HIDDEN CLASS
+=========================== */
+
+.hidden {
+
+    display: none;
+
+}
+
+
+/* ===========================
+   REPOSITORIES
+=========================== */
+
+.repositories {
+
+    background: var(--card-color);
+
+    padding: 30px;
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+}
+
+.repositories h2 {
+
+    margin-bottom: 20px;
+
+    font-size: 1.4rem;
+
+}
+
+#repoList {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+}
+
+#repoList li {
+
+    background: var(--primary);
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    transition: var(--transition);
+
+}
+
+#repoList li:hover {
+
+    transform: translateY(-3px);
+
+}
+
+#repoList a {
+
+    color: white;
+
+    font-weight: 500;
+
+}
+
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: var(--bg-color);
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: var(--primary);
+
+    border-radius: 20px;
+
+}
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:768px){
+
+    .profile-card{
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align:center;
+
+    }
+
+    .profile-image img{
+
+        width:120px;
+        height:120px;
+
+    }
+
+    .stats{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    .links{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+}
+
+@media (max-width:600px){
+
+    .search-section{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    #searchBtn{
+
+        width:100%;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    header h1{
+
+        font-size:1.8rem;
+
+    }
+
+    .profile-card{
+
+        padding:25px;
+
+    }
+
+    .repositories{
+
+        padding:20px;
+
+    }
+
+}
+
+/* ===========================
+   BATTLE MODE
+=========================== */
+
+.battle-section{
+
+    background: var(--card-color);
+
+    padding:25px;
+
+    border-radius:15px;
+
+    margin-bottom:30px;
+
+}
+
+.battle-section h2{
+
+    margin-bottom:20px;
+
+}
+
+.battle-inputs{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.battle-inputs input{
+
+    flex:1;
+
+    padding:15px;
+
+    background:#1a2238;
+
+    color:white;
+
+    border-radius:10px;
+
+}
+
+#battleBtn{
+
+    padding:15px 30px;
+
+    background:var(--primary);
+
+    color:white;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+}
+
+#battleResult{
+
+    margin-top:20px;
+
+}
+
+.winner{
+
+    color:var(--success);
+
+    font-weight:700;
+
+    font-size:1.2rem;
+
+}
+
+.loser{
+
+    color:var(--danger);
+
+    font-weight:700;
+
+    font-size:1.2rem;
+
+}

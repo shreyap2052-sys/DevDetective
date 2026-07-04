@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dev Detective</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- ===========================
+             HEADER
+        ============================ -->
+
+        <header>
+            <h1>Dev Detective</h1>
+        </header>
+
+        <!-- ===========================
+             SEARCH SECTION
+        ============================ -->
+
+        <section class="search-section">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Enter GitHub Username">
+
+            <button id="searchBtn">
+                Search
+            </button>
+
+        </section>
+
+        <section class="battle-section">
+
+    <h2>⚔️ Battle Mode</h2>
+
+    <div class="battle-inputs">
+
+        <input
+            type="text"
+            id="playerOne"
+            placeholder="First GitHub Username">
+
+        <input
+            type="text"
+            id="playerTwo"
+            placeholder="Second GitHub Username">
+
+        <button id="battleBtn">
+            Battle
+        </button>
+
+    </div>
+
+</section>
+
+<div id="battleResult"></div>
+
+        <!-- ===========================
+             LOADING
+        ============================ -->
+
+        <div class="loading hidden">
+            Loading...
+        </div>
+
+        <!-- ===========================
+             ERROR
+        ============================ -->
+
+        <div class="error hidden">
+            User Not Found
+        </div>
+
+        <!-- ===========================
+             PROFILE CARD
+        ============================ -->
+
+        <section class="profile-card">
+
+            <!-- Avatar -->
+
+            <div class="profile-image">
+
+                <img
+                    id="avatar"
+                    src=""
+                    alt="GitHub Avatar">
+
+            </div>
+
+            <!-- Profile Info -->
+
+            <div class="profile-info">
+
+                <h2 id="name">
+                    Name
+                </h2>
+
+                <p id="username">
+                    @username
+                </p>
+
+                <p id="joinDate">
+                    Joined Date
+                </p>
+
+                <p id="bio">
+                    User Bio
+                </p>
+
+                <!-- Stats -->
+
+                <div class="stats">
+
+                    <div>
+
+                        <h3>Repos</h3>
+
+                        <p id="repos">0</p>
+
+                    </div>
+
+                    <div>
+
+                        <h3>Followers</h3>
+
+                        <p id="followers">0</p>
+
+                    </div>
+
+                    <div>
+
+                        <h3>Following</h3>
+
+                        <p id="following">0</p>
+
+                    </div>
+
+                </div>
+
+                <!-- Links -->
+
+                <div class="links">
+
+                    <p id="location">
+                        📍 Location
+                    </p>
+
+                    <p id="company">
+                        🏢 Company
+                    </p>
+
+                    <a
+                        id="website"
+                        href="#"
+                        target="_blank">
+
+                        🌐 Portfolio
+
+                    </a>
+
+                    <a
+                        id="twitter"
+                        href="#"
+                        target="_blank">
+
+                        🐦 Twitter
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===========================
+             REPOSITORIES
+        ============================ -->
+
+        <section class="repositories">
+
+            <h2>
+                Latest Repositories
+            </h2>
+
+            <ul id="repoList">
+
+            </ul>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
